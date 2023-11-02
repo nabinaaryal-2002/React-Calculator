@@ -41,19 +41,7 @@ function App(){
             <div>
               <input type="button" value="0" onClick={e => setValue(value + e.target.value)}/>
               <input type="button" value="00" onClick={e => setValue(value + e.target.value)}/>
-              <input
-  type="button"
-  value="="
-  className="equal"
-  onClick={e => {
-    try {
-      setValue(eval(value));
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  }}
-/>
-
+              <input type="button" value="=" className="equal" onClick={e => setValue(eval(value))}/>
             </div>
           </form>
         </div>
